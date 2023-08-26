@@ -1,0 +1,8 @@
+# macOS
+**/.DS_Store
+
+# Dependencies installed by npm
+node_modules
+
+# Output folder
+public/

@@ -1,0 +1,19 @@
+{
+  "name": "cchirpy.github.io",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "keywords": [],
+  "author": "CChirpy",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "src/index.html",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "debug": "DEBUG=* npx eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
