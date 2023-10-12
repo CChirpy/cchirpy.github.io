@@ -6,3 +6,7 @@ node_modules
 
 # Output folder
 public/
+
+# Obsidian
+.obsidian/
+resources/
