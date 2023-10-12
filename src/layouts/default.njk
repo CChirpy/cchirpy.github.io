@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="keywords" content="{{ site.keywords }}" />
+    <meta name="author" content="{{ site.author }}" />
+
+    <title>{{ site.title }}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>{{ title }}</h1>
+      <nav>
+        <ul>
+          {%- for page in collections.all -%}
+          <li><a href="{{ page.url }}">{{ page.url }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <ul>
+        <li>&copy; 2023 Connie Huang</li>
+      </ul>
+    </footer>
+  </body>
+</html>
