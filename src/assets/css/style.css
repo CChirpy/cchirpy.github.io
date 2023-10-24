@@ -1,0 +1,73 @@
+/* 
+	Author: Connie Huang
+	File: style.css
+	Description: overall style of the website
+*/
+
+/* ================== BASE ================== */
+
+*,
+*:before,
+*:after {
+	/* size accounts for border + padding */
+	box-sizing: border-box;
+}
+
+html {
+	/* root font */
+	font-size: 16px;
+
+	/* smooth scrolling */
+	scroll-behavior: smooth;
+}
+
+body {
+	/* fontstack + line spacing */
+	font-family: monospace;
+	line-height: 1.5;
+
+	/* default colors */
+	background-color: initial;
+	color: initial;
+
+	/* removes wrapper margin */
+	margin: 0;
+}
+
+/* ================== LINKS ================== */
+
+a {
+	color: inherit;
+}
+
+a:hover,
+a:active {
+	color: inherit;
+}
+
+/* =================== NAV =================== */
+
+nav ul {
+	/* remove indent */
+	padding: 0;
+
+	/* remove bulletpoint */
+	list-style: none;
+}
+
+nav a {
+	/* remove underline */
+	text-decoration: none;
+
+	/* button size */
+	padding: 0.8rem 1rem;
+
+	/* button color */
+	background-color: inherit;
+}
+
+nav a:hover,
+nav a:active {
+	/* button color on interact */
+	background-color: inherit;
+}

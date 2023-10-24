@@ -1,0 +1,24 @@
+/*
+	Author: Connie Huang
+	File: layout.css
+	Description: default website layout
+*/
+
+/* ================== BASE ================== */
+
+body {
+	/* center text */
+	text-align: center;
+}
+
+body>* {
+	/* pads all sections */
+	padding: 3rem;
+}
+
+/* =================== NAV =================== */
+
+nav li {
+	/* display inline while keeping size */
+	display: inline-block;
+}
