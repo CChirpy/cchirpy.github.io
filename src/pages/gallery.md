@@ -1,5 +1,5 @@
 ---
 layout: default.njk
-title: Work
+title: Gallery
 permalink: "/{{ title | slugify }}/index.html"
 ---
