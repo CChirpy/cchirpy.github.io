@@ -2,11 +2,13 @@
 **/.DS_Store
 
 # Dependencies installed by npm
-node_modules
+node_modules/
 
 # Output folder
 public/
 
-# Obsidian
-.obsidian/
+# Workspace settings
+.vscode/
+
+# Drafts and post templates
 resources/
