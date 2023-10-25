@@ -1,7 +1,7 @@
 /* 
 	Author: Connie Huang
 	File: style.css
-	Description: overall style of the website
+	Description: typography, colors, padding, behavior
 */
 
 /* ================== BASE ================== */
@@ -34,6 +34,11 @@ body {
 	margin: 0;
 }
 
+body>* {
+	/* pads all sections */
+	padding: 3rem;
+}
+
 /* ================== LINKS ================== */
 
 a {
@@ -48,10 +53,8 @@ a:active {
 /* =================== NAV =================== */
 
 nav ul {
-	/* remove indent */
+	/* remove indent + bulletpoint */
 	padding: 0;
-
-	/* remove bulletpoint */
 	list-style: none;
 }
 
