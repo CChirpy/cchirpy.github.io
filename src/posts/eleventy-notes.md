@@ -2,6 +2,10 @@
 layout: default.njk
 title: Eleventy Notes
 permalink: blog/{{ title | slugify }}/index.html
+date: Last Modified
+created: 2023-10-17
+description: 
+image:
 tags:
   - post
   - note

@@ -2,17 +2,23 @@
 layout: default.njk
 title: cchirpy.github.io changelog
 permalink: blog/{{ title | slugify }}/index.html
+date: Last Modified
+created: 2023-07-03
+description: 
+image:
 tags:
   - post
   - note
   - log
 ---
-### 2023-10-25 - deployment
+### 2023-10-25 - deployment + started blog
 - Created and deleted `gh-pages` branch
 - Created `.github/workflows/build.yml` to publish site on GitHub Pages
 - Moved Obsidian workspace to `posts/` folder and created `.eleventyignore`
 - Updated `.gitignore` (allow Obsidian and VSCode)
 - Updated `README.md` to include setup instructions
+- Updated template to use partials
+- Added dates to posts
 
 ### 2023-10-24 - first published version
 - Re-added Obsidian in `resources/` folder
