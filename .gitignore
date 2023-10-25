@@ -6,9 +6,3 @@ node_modules/
 
 # Output folder
 public/
-
-# Workspace settings
-.vscode/
-
-# Drafts and post templates
-resources/
