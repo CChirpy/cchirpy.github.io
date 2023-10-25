@@ -5,6 +5,7 @@ permalink: blog/{{ title | slugify }}/index.html
 tags:
   - post
   - note
-  - log
+  - article
   - reference
+  - log
 ---
