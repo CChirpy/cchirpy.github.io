@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: blog.njk
 title: Blog
 permalink: "/{{ title | slugify }}/index.html"
 ---

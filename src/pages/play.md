@@ -1,6 +1,6 @@
 ---
 layout: default.njk
-title: Community
+title: Play
 permalink: "/{{ title | slugify }}/index.html"
 ---
 
