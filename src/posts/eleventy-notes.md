@@ -3,6 +3,7 @@ layout: default.njk
 title: Eleventy Notes
 permalink: blog/{{ title | slugify }}/index.html
 tags:
+  - post
   - note
   - reference
 ---
@@ -24,6 +25,7 @@ tags:
 - [11ty Recipes: Sitemap](https://11ty.recipes/recipes/add-a-sitemap/)
 - [Minimal CSS Reset](https://www.digitalocean.com/community/tutorials/css-minimal-css-reset)
 - [Publishing an Eleventy site to GitHub Pages via Actions](https://kemikal.io/posts/publishing-an-eleventy-site-to-github-pages-via-actions/)
+
 ## Prospecting
 
 - [Static HTML Form using Google Apps](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)

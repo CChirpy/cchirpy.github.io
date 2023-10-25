@@ -1,20 +1,18 @@
 ---
 layout: default.njk
-title: Personal Website Changelog
+title: cchirpy.github.io changelog
 permalink: blog/{{ title | slugify }}/index.html
 tags:
+  - post
   - note
   - log
 ---
-### To-do
-- **Host 11ty on GitHub Pages**
-- **Add content to pages**
-- Setup blog and gallery
-- Add contact form
-- Setup analytics
-
-### 2023-10-25 - deploy
-- 
+### 2023-10-25 - deployment
+- Created and deleted `gh-pages` branch
+- Created `.github/workflows/build.yml` to publish site on GitHub Pages
+- Moved Obsidian workspace to `posts/` folder and created `.eleventyignore`
+- Updated `.gitignore` (allow Obsidian and VSCode)
+- Updated `README.md` to include setup instructions
 
 ### 2023-10-24 - first published version
 - Re-added Obsidian in `resources/` folder
