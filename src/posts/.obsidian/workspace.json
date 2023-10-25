@@ -4,46 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d65f4271635b7c03",
+        "id": "e61a346878785384",
         "type": "tabs",
         "children": [
           {
-            "id": "b74e0e7830e6bca2",
+            "id": "265231d59c6ff252",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "website-changelog.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "e0c6c9a51b7e1719",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "website-changelog.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "b3e8f5b870e9470b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "23aaed3aa69aee3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "templates/POST.md",
+                "file": "eleventy-notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "website-changelog.md",
+                "file": "eleventy-notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "website-changelog.md",
+                "file": "eleventy-notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "website-changelog.md"
+                "file": "eleventy-notes.md"
               }
             }
           }
@@ -176,11 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b74e0e7830e6bca2",
+  "active": "265231d59c6ff252",
   "lastOpenFiles": [
     "eleventy-notes.md",
     "website-changelog.md",
     "templates/POST.md",
+    "Untitled.md",
     "templates/PAGE.md",
     "templates/NOTE.md"
   ]
