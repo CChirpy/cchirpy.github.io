@@ -31,6 +31,7 @@ cchirpy.github.io/
 
 ### Additional Scripts
 
-- `npm run clean` removes current build.
 - `npm run serve` builds and preview site.
+- `npm run clean` removes current build.
 - `npm run debug` goes into debug mode.
+- `npm run clean && npm run build` combined script essentially refreshes output folder.
