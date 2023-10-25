@@ -1,0 +1,63 @@
+# Workflow for deploying Eleventy to GitHub Pages
+name: Deploy Eleventy
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push events on the "main" branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Specifies to use the latest LTS version of Node.js
+    strategy:
+      matrix:
+        node-version: [lts/*]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Specifies the branch and folder to deploy
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          branch-name: gh-pages
+          folder: public
+
+      # Sets up Node.js
+      - name: Build with Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Installs dependencies and builds the project
+      - run: npm install
+      - run: npm run build
+
+      # Uploads the built site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public

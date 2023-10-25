@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rm -rf public/",
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve",
+    "serve": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx eleventy"
   },
   "dependencies": {

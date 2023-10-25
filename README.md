@@ -6,14 +6,16 @@ My personal website, made with [11ty](https://www.11ty.dev/docs/).
 
 ```md
 cchirpy.github.io/
+├── .github/         # Deployment configurations
 ├── public/          # Output directory (automatically generated)
-├── src/             # Source directory containing content and templates
-│   ├── assets/      # Stylesheets, images, etc.
+├── src/             # Source directory 
+│   ├── assets/      # Stylesheets and images
 │   ├── data/        # Data files
 │   ├── includes/    # Reusable templates
-│   ├── pages/       # Website pages
-│   ├── posts/       # Blog posts
+│   ├── pages/       # Main website pages
+│   ├── posts/       # All posts
+│   ├── robot.txt    # Allows web crawlers to index the site
 │   └── sitemap.njk  # Sitemap for search engine optimization
 ├── .eleventy.js     # 11ty configuration file
-└── package.json     # Project configuration and list of dependencies
+└── package.json     # Project config, scripts, and dependency list
 ```
