@@ -1,7 +1,7 @@
 /* 
 	Author: Connie Huang
 	File: style.css
-	Description: typography, colors, padding, behavior
+	Description: typography, colors, spacing
 */
 
 /* ================== BASE ================== */
@@ -29,14 +29,11 @@ body {
 	/* default colors */
 	background-color: initial;
 	color: initial;
-
-	/* removes wrapper margin */
-	margin: 0;
 }
 
 body>* {
 	/* pads all sections */
-	padding: 3rem;
+	padding: 3rem 15%;
 }
 
 /* ================== LINKS ================== */
@@ -63,7 +60,7 @@ nav a {
 	text-decoration: none;
 
 	/* button size */
-	padding: 0.8rem 1rem;
+	padding: 1rem;
 
 	/* button color */
 	background-color: inherit;
@@ -74,3 +71,6 @@ nav a:active {
 	/* button color on interact */
 	background-color: inherit;
 }
+
+/* ================ TYPOGRAPHY ================ */
+

@@ -4,14 +4,17 @@
 	Description: default website layout
 */
 
-/* ================== BASE ================== */
-
-body {
-	/* center text */
-	text-align: center;
+header {
+	text-align: right;
 }
 
-/* =================== NAV =================== */
+main {
+	text-align: left;
+}
+
+footer {
+	text-align: center;
+}
 
 nav li {
 	/* display inline while keeping size */
