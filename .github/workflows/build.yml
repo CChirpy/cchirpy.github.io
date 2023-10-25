@@ -42,9 +42,6 @@ jobs:
       # Specifies the branch and folder to deploy
       - name: Setup Pages
         uses: actions/configure-pages@v3
-        with:
-          branch-name: gh-pages
-          folder: public
 
       # Sets up Node.js
       - name: Build with Node.js ${{ matrix.node-version }}
@@ -60,4 +57,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          branch-name: gh-pages
+          folder: ./public
