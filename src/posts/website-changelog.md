@@ -4,8 +4,8 @@ title: cchirpy.github.io changelog
 permalink: blog/{{ title | slugify }}/index.html
 date: Last Modified
 created: 2023-07-03
-description: 
-image:
+description: The changelog for this website.
+image: 
 tags:
   - post
   - note
@@ -17,8 +17,19 @@ tags:
 - Moved Obsidian workspace to `posts/` folder and created `.eleventyignore`
 - Updated `.gitignore` (allow Obsidian and VSCode)
 - Updated `README.md` to include setup instructions
-- Updated template to use partials
-- Added dates to posts
+- Updated styles
+	- Realigned header, main, and footer to right, left, and middle respectively
+	- Underline `.active` class
+- Updated templates
+	- Added partials: `_footer.njk`, `_header.njk`, `_meta.njk`
+		- `_header.njk` automatically generates `.active` 
+		- Fixed site title to display "Blog" instead of post's title when viewing posts
+	- Created `collection.njk` for "blog" page
+- Added more properties to posts
+	- `date`: last modified
+	- `created`: creation date
+	- `description`: headline/description/blurb
+	- `image`: image front
 
 ### 2023-10-24 - first published version
 - Re-added Obsidian in `resources/` folder
