@@ -4,4 +4,9 @@
 		<meta name="description" content="{{ site.description }}"/>
 		<meta name="keywords" content="{{ site.keywords }}"/>
 		<meta name="author" content="{{ site.author }}"/>
+		
+		{% if '/blog/' in page.url %}
+		<title>{{ site.title }} &#183; Blog</title>
+		{% else %}
 		<title>{{ site.title }} &#183; {{ title }}</title>
+		{% endif %}

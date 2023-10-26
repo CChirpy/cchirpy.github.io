@@ -2,10 +2,10 @@
 		<header>
 			<nav>
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/blog/">Blog</a></li>
-					<li><a href="/work/">Work</a></li>
-					<li><a href="/play/">Play</a></li>
+					<li><a class="{{ 'active' if page.url === '/'}}" href="/">Home</a></li>
+					<li><a class="{{ 'active' if '/blog' in page.url }}" href="/blog/">Blog</a></li>
+					<li><a class="{{ 'active' if '/work' in page.url }}" href="/work/">Work</a></li>
+					<li><a class="{{ 'active' if '/play' in page.url }}" href="/play/">Play</a></li>
 				</ul>
 			</nav>
 		</header>

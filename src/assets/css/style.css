@@ -60,16 +60,18 @@ nav a {
 	text-decoration: none;
 
 	/* button size */
-	padding: 1rem;
+	padding: 0.7rem 0.8rem;
 
 	/* button color */
 	background-color: inherit;
 }
 
 nav a:hover,
-nav a:active {
-	/* button color on interact */
+nav a:active,
+nav .active {
+	/* button changes on interact */
 	background-color: inherit;
+	text-decoration: underline;
 }
 
 /* ================ TYPOGRAPHY ================ */
