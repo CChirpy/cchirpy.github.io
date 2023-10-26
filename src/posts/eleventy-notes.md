@@ -4,8 +4,8 @@ title: Eleventy Notes
 permalink: blog/{{ title | slugify }}/index.html
 date: Last Modified
 created: 2023-10-17
-description: 
-image:
+description: A collection of links used for creating an 11ty website.
+image: 
 tags:
   - post
   - note
