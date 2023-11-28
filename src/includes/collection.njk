@@ -16,11 +16,30 @@
 
 			<ul>
 				{%- for post in collections.post -%}
-					<li>
-						<a href="{{ post.url }}">{{ post.data.title }}</a>
+					<li>{{ post.data.title }}
 						<ul>
-							<li>{{ post.data.date.toLocaleDateString(en-US, {year: 'numeric', month: 'long', day: 'numeric'}) }}</li>
-							<li>{{ post.content | excerpt | safe }}</li>
+							<li>Date
+								<ul>
+									<li>{{ post.data.date.toLocaleDateString(en-US, {year: 'numeric', month: 'long', day: 'numeric'}) }}</li>
+								</ul>
+							</li>
+							<li>Excerpt
+								<ul>
+									<li>{{ post.content | excerpt | safe }}</li>
+									<li>
+										<a href="{{ post.url }}">Read more →</a>
+									</li>
+								</ul>
+							</li>
+							<li>Tags
+								<ul>
+									{%- for tag in post.data.tags -%}
+										{% if tag != 'post' %}
+											<li>{{ tag }}</li>
+										{% endif %}
+									{%- endfor -%}
+								</ul>
+							</li>
 						</ul>
 					</li>
 				{%- endfor -%}
