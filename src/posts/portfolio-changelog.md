@@ -2,15 +2,20 @@
 layout: default.njk
 title: cchirpy.github.io changelog
 permalink: blog/{{ title | slugify }}/index.html
-date: Last Modified
-created: 2023-07-03
-description: The changelog for this website.
+date: 2023-07-03
 image: 
 tags:
   - post
   - note
   - log
 ---
+
+The changelog for this website.
+
+### 2023-11-27 - edited collections template
+- Added filters to get the date and first paragraph of a post
+- TO-DO: add images to posts
+
 ### 2023-10-25 - deployment + started blog
 - Created and deleted `gh-pages` branch
 - Created `.github/workflows/build.yml` to publish site on GitHub Pages

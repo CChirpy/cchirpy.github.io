@@ -2,15 +2,16 @@
 layout: default.njk
 title: Eleventy Notes
 permalink: blog/{{ title | slugify }}/index.html
-date: Last Modified
-created: 2023-10-17
-description: A collection of links used for creating an 11ty website.
+date: 2023-10-17
 image: 
 tags:
   - post
   - note
   - reference
 ---
+
+A collection of links used and saved while creating my personal 11ty website.
+
 ## Documentation
 
 - [11ty Docs](https://www.11ty.dev/docs/templates/)
@@ -29,6 +30,7 @@ tags:
 - [11ty Recipes: Sitemap](https://11ty.recipes/recipes/add-a-sitemap/)
 - [Minimal CSS Reset](https://www.digitalocean.com/community/tutorials/css-minimal-css-reset)
 - [Publishing an Eleventy site to GitHub Pages via Actions](https://kemikal.io/posts/publishing-an-eleventy-site-to-github-pages-via-actions/)
+- [Stack Overflow: Extracting First Paragraph](https://stackoverflow.com/a/61792028)
 
 ## Prospecting
 

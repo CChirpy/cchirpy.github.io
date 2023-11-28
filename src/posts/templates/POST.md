@@ -2,9 +2,7 @@
 layout: default.njk
 title: 
 permalink: blog/{{ title | slugify }}/index.html
-date: Last Modified
-created: "{{date}}"
-description: 
+date: "{{date}}"
 image: 
 tags:
   - post

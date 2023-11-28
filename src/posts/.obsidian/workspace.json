@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e61a346878785384",
+        "id": "1f380c287dd5cac5",
         "type": "tabs",
         "children": [
           {
-            "id": "265231d59c6ff252",
+            "id": "3051c3eae6a43e4b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,13 +146,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "265231d59c6ff252",
+  "active": "3051c3eae6a43e4b",
   "lastOpenFiles": [
+    "portfolio-changelog.md",
     "eleventy-notes.md",
-    "website-changelog.md",
     "templates/POST.md",
-    "Untitled.md",
     "templates/PAGE.md",
+    "2023-10-17.md",
+    "2023-07-03.md",
+    "Untitled.md",
     "templates/NOTE.md"
   ]
 }
