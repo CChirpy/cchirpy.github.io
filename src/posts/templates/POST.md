@@ -3,7 +3,7 @@ layout: default.njk
 title: 
 permalink: blog/{{ title | slugify }}/index.html
 date: "{{date}}"
-image: 
+image: /assets/img/..
 tags:
   - post
   - note

@@ -3,7 +3,7 @@ layout: default.njk
 title: Eleventy Notes
 permalink: blog/{{ title | slugify }}/index.html
 date: 2023-10-17
-image: 
+image: /assets/img/balloonpossum.png
 tags:
   - post
   - note
