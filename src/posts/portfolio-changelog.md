@@ -14,6 +14,7 @@ The changelog for this website.
 
 ### 2023-11-27 - edited collections template
 - Added filters to get the date and first paragraph of a post
+- Simplified post properties
 - TO-DO: add images to posts
 
 ### 2023-10-25 - deployment + started blog
