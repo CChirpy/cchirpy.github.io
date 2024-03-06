@@ -2,7 +2,21 @@ module.exports = function (eleventyConfig) {
 	// Include assets in output folder.
 	eleventyConfig.addPassthroughCopy("src/assets/");
 
+	// Returns the current year.
+	// Usage: {% year %}
+	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+	// Returns the first image of a post.
+	// Usage: {{ post.content | preview }}
+	eleventyConfig.addFilter("preview", (post) => {
+		const response = post;
+		const regex = /<img.*?src="(.*?)"/;
+		const corresp = regex.exec(response);
+		return corresp ? corresp[1] : "";
+	});
+
 	// Returns the first paragraph of a post.
+	// Usage: {{ post.content | excerpt | safe }}
 	eleventyConfig.addFilter("excerpt", (post) => {
 		const response = post;
 		const regex = /<p>(.*?)<\/p>/;

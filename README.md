@@ -2,7 +2,7 @@
 
 🚧 This website is still under development! 🚧
 
-My personal website; Made with [11ty](https://www.11ty.dev/docs/), managed with [Obsidian](https://obsidian.md), and deployed on [GitHub Pages](https://pages.github.com).
+My personal website; Made with [11ty](https://www.11ty.dev/docs/), managed with [Notion](https://www.notion.so/download), and deployed on [GitHub Pages](https://pages.github.com).
 
 ## Project Structure
 
@@ -11,9 +11,9 @@ cchirpy.github.io/
 ├── .github/         # GitHub configurations
 ├── public/          # Output directory (automatically generated)
 ├── src/             # Source directory 
-│   ├── assets/      # Stylesheets and media files
+│   ├── assets/      # Stylesheets, media, and scripts
 │   ├── data/        # Data files
-│   ├── includes/    # Reusable templates
+│   ├── includes/    # Template files
 │   ├── pages/       # Main website pages
 │   ├── posts/       # All posts
 │   ├── robot.txt    # Allows web crawlers to index the site

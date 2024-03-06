@@ -1,10 +1,10 @@
 /* 
 	Author: Connie Huang
 	File: style.css
-	Description: typography, colors, spacing
+	Description: default appearance for all pages
 */
 
-/* ================== BASE ================== */
+/* ==================== BASE ==================== */
 
 *,
 *:before,
@@ -23,56 +23,183 @@ html {
 
 body {
 	/* fontstack + line spacing */
-	font-family: monospace;
+	font-family: "Josefin Sans", sans-serif;
 	line-height: 1.5;
 
 	/* default colors */
 	background-color: initial;
 	color: initial;
+
+	/* zero margin */
+	margin: 0;
+}
+
+img {
+	/* responsive images */
+	max-width: 100%;
+	height: auto;
+}
+
+/* =================== STYLING =================== */
+
+body {
+	color: #2e2e37;
+	background-color: #f1f1f7;
+}
+
+footer {
+	color: #f1f1f7;
+	background-color: #2e2e37;
+}
+
+a {
+	color: inherit;
+	background-color: none;
+}
+
+a:hover:not(header > a),
+a:active:not(header > a) {
+	color: #ED6A5A;
+}
+
+header a,
+nav a {
+	text-decoration: none;
+}
+
+header a {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+header nav a:hover {
+	/* button changes on interact */
+	border-bottom: 2px solid #ED6A5A;
+}
+
+header nav .active {
+	/* button changes on interact */
+	border-bottom: 2px solid #2e2e37;
+
+}
+
+/* =================== LAYOUT =================== */
+
+html,
+body {
+	/* pushes footer down */
+	height: 110%;
 }
 
 body>* {
 	/* pads all sections */
-	padding: 3rem 15%;
+	padding: 3rem 10% 3rem 10%;
 }
 
-/* ================== LINKS ================== */
-
-a {
-	color: inherit;
+body>*:nth-child(1) {
+	/* removes space between header and main */
+	padding: 3rem 10% 0 10%;
 }
 
-a:hover,
-a:active {
-	color: inherit;
+body {
+	/* allows sections to strech from top to bottom */
+	display: flex;
+	flex-flow: column nowrap;
 }
 
-/* =================== NAV =================== */
+main {
+	/* main section stretches to bottom */
+	flex-grow: 2;
+
+	/* spacing for walls of text */
+	/*margin: 3rem 0;*/
+}
+
+/* =============== HEADER & FOOTER =============== */
+
+header *,
+footer * {
+	/* reset margin */
+	margin: inherit;
+}
+
+header,
+footer {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+
+	/* gap for small screens*/
+	gap: 0 2rem;
+}
+
+footer nav {
+	display: flex;
+	flex-flow: row wrap;
+	flex-basis: 25%;
+}
+
+/* ===================== NAV ===================== */
 
 nav ul {
-	/* remove indent + bulletpoint */
+	/* remove list styling */
 	padding: 0;
 	list-style: none;
 }
 
-nav a {
-	/* remove underline */
-	text-decoration: none;
-
-	/* button size */
-	padding: 0.7rem 0.8rem;
-
-	/* button color */
-	background-color: inherit;
+nav li {
+	/* display links side by side and add spacing */
+	display: inline-block;
+	margin: 0 0.7rem 0 0;
 }
 
-nav a:hover,
-nav a:active,
-nav .active {
-	/* button changes on interact */
-	background-color: inherit;
-	text-decoration: underline;
+nav li:last-child {
+	/* no added spacing after last link */
+	margin: 0 0 0 0;
 }
 
-/* ================ TYPOGRAPHY ================ */
+/* ==================== FORMS ==================== */
 
+form {
+	display: flex;
+	flex-flow: column nowrap;
+	height: 100%;
+}
+
+textarea {
+	flex-grow: 2;
+	resize: vertical;
+}
+
+form * {
+	margin: 0.5rem 0;
+	border-style: none;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+input,
+select,
+textarea {
+	padding: 0.5rem;
+	border-radius: 0.2rem;
+	background-color: white;
+	outline: none;
+}
+
+input[type=submit] {
+	cursor: pointer;
+	align-self: flex-end;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+	filter: drop-shadow(1px 1px 0px #ED6A5A);
+}
+
+.thankyou_message {
+	background-color: white;
+	filter: drop-shadow(1px 1px 0px #2e2e37);
+	padding: 0.5rem 1rem;
+	border-radius: 0.2rem;
+	margin: 1rem 0;
+}

@@ -1,11 +1,12 @@
 <!-- _header.njk -->
-		<header>
-			<nav>
-				<ul>
-					<li><a class="{{ 'active' if page.url === '/'}}" href="/">Home</a></li>
-					<li><a class="{{ 'active' if '/blog' in page.url }}" href="/blog/">Blog</a></li>
-					<li><a class="{{ 'active' if '/work' in page.url }}" href="/work/">Work</a></li>
-					<li><a class="{{ 'active' if '/play' in page.url }}" href="/play/">Play</a></li>
-				</ul>
-			</nav>
-		</header>
+<header>
+	<a href="/">CChirpy</a>
+	<nav>
+		<ul>
+			<li><a class="{{ 'active' if page.url === '/'}}" href="/">Home</a></li>
+			{# <li><a class="{{ 'active' if '/blog' in page.url }}" href="/blog/">Blog</a></li> #}
+			<li><a class="{{ 'active' if '/work' in page.url }}" href="/work/">Work</a></li>
+			<li><a class="{{ 'active' if '/contact' in page.url }}" href="/contact/">Contact</a></li>
+		</ul>
+	</nav>
+</header>
