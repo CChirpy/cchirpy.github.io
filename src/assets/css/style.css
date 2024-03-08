@@ -23,7 +23,7 @@ html {
 
 body {
 	/* fontstack + line spacing */
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Josefin Sans", sans-serif, monospace;
 	line-height: 1.5;
 
 	/* default colors */
@@ -115,6 +115,29 @@ main {
 	/*margin: 3rem 0;*/
 }
 
+pre {
+	overflow-x: scroll;
+}
+
+code {
+	overflow-wrap: break-word;
+}
+
+img {
+	width: 30rem;
+	margin: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 0.2rem;
+	filter: drop-shadow(1px 1px 1px #e1e1e6);
+}
+
+li p img {
+	display: inline;
+	margin: 0rem;
+}
+
 /* =============== HEADER & FOOTER =============== */
 
 header *,
@@ -189,6 +212,7 @@ textarea {
 input[type=submit] {
 	cursor: pointer;
 	align-self: flex-end;
+	color: #2e2e37;
 }
 
 input[type=submit]:hover,
@@ -202,4 +226,32 @@ input[type=submit]:active {
 	padding: 0.5rem 1rem;
 	border-radius: 0.2rem;
 	margin: 1rem 0;
+}
+
+/* ==================== POSTS ==================== */
+
+.side-by-side {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.side-by-side * {
+	margin: 0rem;
+}
+
+.tags {
+	/* remove list styling */
+	padding: 0;
+	list-style: none;
+	margin: 0 0 0.5rem;
+}
+
+.tags * {
+	display: inline-block;
+	background-color: #e1e1e6;
+	padding: 0.2rem 0.4rem 0rem;
+	border-radius: 0.5rem;
+	margin: 0 0.1rem 0 0;
 }

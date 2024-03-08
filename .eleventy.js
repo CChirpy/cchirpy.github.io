@@ -1,12 +1,22 @@
+const markdownIt = require("markdown-it");
+
 module.exports = function (eleventyConfig) {
-	// Include assets in output folder.
+	// Include assets in output folder
 	eleventyConfig.addPassthroughCopy("src/assets/");
 
-	// Returns the current year.
+	// Returns the current year
 	// Usage: {% year %}
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-	// Returns the first image of a post.
+	// Markdown to HTML filter
+	const md = new markdownIt({
+		html: true,
+	});
+	eleventyConfig.addFilter("markdown", (content) => {
+		return md.render(content);
+	});
+
+	// Returns the first image of a post
 	// Usage: {{ post.content | preview }}
 	eleventyConfig.addFilter("preview", (post) => {
 		const response = post;
@@ -15,7 +25,7 @@ module.exports = function (eleventyConfig) {
 		return corresp ? corresp[1] : "";
 	});
 
-	// Returns the first paragraph of a post.
+	// Returns the first paragraph of a post
 	// Usage: {{ post.content | excerpt | safe }}
 	eleventyConfig.addFilter("excerpt", (post) => {
 		const response = post;
