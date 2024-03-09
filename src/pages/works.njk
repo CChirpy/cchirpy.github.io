@@ -1,12 +1,13 @@
 ---
 layout: default.njk
-title: Work
+tags: work
 pagination:
     data: works
     size: 1
     alias: work
+    addAllPagesToCollections: true
+title: Work
 permalink: "/work/{{ work.name | slugify }}/"
-tags: work
 ---
 
 <div class="side-by-side">

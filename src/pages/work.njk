@@ -3,3 +3,28 @@ layout: default.njk
 title: Work
 permalink: "/work/index.html"
 ---
+
+<h1>{{ title }}</h1>
+
+{% for post in collections.work %}
+	<ul>
+		{% if loop.index0 < works | length %}
+			<li>
+				<p><img src="{{ post.content | preview | safe }}" alt="{{ works[loop.index0].name }}"><p>
+			</li>
+			<li>
+				<a href="{{ post.url }}">{{ works[loop.index0].name }}</a>
+			</li>
+			<li>
+				{{ works[loop.index0].description }}
+			</li>
+			<li>
+				<ul class="tags">
+					{% for tag in works[loop.index0].tags %}
+						<li>{{ tag }}</li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endif %}
+	</ul>
+{% endfor %}
