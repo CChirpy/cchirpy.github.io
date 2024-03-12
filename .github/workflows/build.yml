@@ -49,9 +49,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # Installs dependencies and builds the project
+      # Installs dependencies
       - run: npm install
-      - run: npm run build
 
       # Create .env file from secrets
       - name: Create .env file
@@ -60,6 +59,9 @@ jobs:
           echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} > .env
           echo NOTION_ID=${{ secrets.NOTION_ID }} >> .env
           cat .env
+
+      # Builds the site
+      - run: npm run build
 
       # Uploads the built site
       - name: Upload artifact
