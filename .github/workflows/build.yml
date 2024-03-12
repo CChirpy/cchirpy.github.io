@@ -35,18 +35,18 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v3
-
       # Create .env file from secrets
       - name: Create .env file
         run: |
           touch .env
-          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} > .env
           echo NOTION_ID=${{ secrets.NOTION_ID }} >> .env
           cat .env
-          
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+
       # Sets up the GitHub Pages deploy action
       - name: Setup Pages
         uses: actions/configure-pages@v3
