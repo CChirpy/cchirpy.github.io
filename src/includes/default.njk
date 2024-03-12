@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-	<!-- https://github.com/CChirpy/cchirpy.github.io -->
-
 	<head>
 		{% include '_scripts.njk' %}
 		{% include '_meta.njk' %}
-		
-		<link rel="stylesheet" href="/assets/css/style.css"/>
 	</head>
 
 	<body>
 		{% include '_header.njk' %}
-
+		<!-- content -->
 		<main>
 			{{ content | safe }}
 		</main>
-
 		{% include '_footer.njk' %}
 	</body>
 </html>

@@ -10,37 +10,34 @@ title: Work
 permalink: "/work/{{ work.name | slugify }}/"
 ---
 
-<div class="side-by-side">
-    <h1>{{ work.name }}</h1>
-    {% if work.organization %}
-        <p>{{ work.organization }}</p>
+<div class="properties">
+    <div class="side-by-side">
+        <h1>{{ work.name }}</h1>
+        {% if work.organization %}
+            <p>{{ work.organization }}</p>
+        {% endif %}
+    </div>
+    <div class="side-by-side">
+        <p>{{ work.status }}</p>
+        <p>
+            <time datetime="{{ work.year }}">{{ work.year }}</time>
+        </p>
+    </div>
+    <p>{{ work.description }}</p>
+    {% if work.website %}
+        <p>
+            <a href="{{ work.website }}">{{ work.website }};</a>
+        </p>
     {% endif %}
+    <ul class="inline-list tags">
+        {% for tag in work.tags %}
+            <li>{{ tag }}</li>
+        {% endfor %}
+    </ul>
+    <ul class="inline-list tags">
+        {% for tool in work.tools %}
+            <li>{{ tool }}</li>
+        {% endfor %}
+    </ul>
 </div>
-
-<div class="side-by-side">
-    <p>{{ work.status }}</p>
-    <p>
-        <time datetime="{{ work.year }}">{{ work.year }}</time>
-    </p>
-</div>
-
-<p>{{ work.description }}</p>
-{% if work.website %}
-    <p>
-        <a href="{{ work.website }}">{{ work.website }}</a>
-    </p>
-{% endif %}
-
-<ul class="tags">
-    {% for tag in work.tags %}
-        <li>{{ tag }}</li>
-    {% endfor %}
-</ul>
-
-<ul class="tags">
-    {% for tool in work.tools %}
-        <li>{{ tool }}</li>
-    {% endfor %}
-</ul>
-
 {{ work.content | markdown | safe }}
