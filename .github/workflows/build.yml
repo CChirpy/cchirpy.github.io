@@ -41,6 +41,8 @@ jobs:
           touch .env
           echo NOTION_TOKEN="${{ secrets.NOTION_TOKEN }}" > .env
           echo NOTION_ID="${{ secrets.NOTION_ID }}" >> .env
+          echo TEST_VALUE="testing" >> .env
+          echo TEST_VALUE2=testing >> .env
           cat .env
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
