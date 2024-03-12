@@ -20,7 +20,7 @@ module.exports = async () => {
 		filter: {
 			property: "Status",
 			status: {
-				does_not_equal: "Not started",
+				does_not_equal: "Hidden",
 			},
 		},
 		sorts: [
@@ -38,14 +38,14 @@ module.exports = async () => {
 		const mdblocks = await n2m.pageToMarkdown(result.id);
 		const mdstring = n2m.toMarkdownString(mdblocks).parent;
 		return {
-			name: result.properties['Name'].title[0].plain_text,
-			description: result.properties['Description'].rich_text[0].plain_text,
-			year: result.properties['Year'].formula.number,
-			status: result.properties['Status'].status.name,
-			tags: result.properties['Tags'].multi_select.map(tag => tag.name),
-			tools: result.properties['Tools'].multi_select.map(tag => tag.name),
-			organization: result.properties['Organization'].select?.name || null,
-			website: result.properties['Website'].url || null,
+			name: result.properties["Name"].title[0].plain_text,
+			description: result.properties["Description"].rich_text[0].plain_text,
+			year: result.properties["Year"].formula.number,
+			status: result.properties["Status"].status.name,
+			tags: result.properties["Tags"].multi_select.map((tag) => tag.name),
+			tools: result.properties["Tools"].multi_select.map((tag) => tag.name),
+			organization: result.properties["Organization"].select?.name || null,
+			website: result.properties["Website"].url || null,
 			content: mdstring,
 		};
 	});
