@@ -39,16 +39,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      # Create .env file from secrets
+      - name: Create .env file
+        run: |
+          touch .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
+          echo NOTION_ID=${{ secrets.NOTION_ID }} >> .env
+          cat .env
+          
       # Sets up the GitHub Pages deploy action
       - name: Setup Pages
         uses: actions/configure-pages@v3
-
-      # Create .env file from secret
-      - name: Create .env file
-        run: |
-          echo "NOTION_TOKEN='${{ secrets.NOTION_TOKEN }}'" > .env
-          echo "NOTION_ID='${{ secrets.NOTION_ID }}'" >> .env
-          cat .env
 
       # Sets up Node.js
       - name: Build with Node.js ${{ matrix.node-version }}
