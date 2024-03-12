@@ -47,7 +47,7 @@ jobs:
       - name: Create .env file
         run: |
           touch .env
-          echo NOTION_KEY=${{ secrets.NOTION_TOKEN }} >> .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
           echo NOTION_ID=${{ secrets.NOTION_ID }} >> .env
           cat .env
 
