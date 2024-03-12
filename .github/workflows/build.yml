@@ -39,15 +39,9 @@ jobs:
       - name: Create .env file
         run: |
           touch .env
-          echo NOTION_TOKEN="${{ secrets.NOTION_TOKEN }}" > .env
-          echo NOTION_ID="${{ secrets.NOTION_ID }}" >> .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} > .env
+          echo NOTION_ID=${{ secrets.NOTION_ID }} >> .env
           cat .env
-
-      - name: Verify Notion API Token
-        run: |
-          curl -X POST https://api.notion.com/v1/databases \
-            -H "Authorization: Bearer $NOTION_TOKEN" \
-            -H "Notion-Version: 2021-08-16"
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
