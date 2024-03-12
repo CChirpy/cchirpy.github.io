@@ -4,6 +4,7 @@ name: Refresh
 on:
   schedule:
     - cron: '1 18 * * *'  # Run at 6:01pm everyday
+  workflow_dispatch:
 jobs:
   refresh:
     runs-on: ubuntu-latest
