@@ -46,9 +46,11 @@ jobs:
       # Create .env file from secret
       - name: Create .env file
         run: |
-          echo "NOTION_KEY=${{ secrets.NOTION_KEY }}" > .env
-          echo "NOTION_ID=${{ secrets.NOTION_ID }}" >> .env
-      
+          touch .env
+          echo NOTION_KEY="${{ secrets.NOTION_KEY }}" >> .env
+          echo NOTION_ID="${{ secrets.NOTION_ID }}" >> .env
+          cat .env
+
       # Sets up Node.js
       - name: Build with Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
