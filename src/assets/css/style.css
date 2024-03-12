@@ -224,6 +224,7 @@ code {
 }
 
 .gallery img {
+	position: relative;
 	height: 100%;
 	width: auto;
 	object-fit: cover;
