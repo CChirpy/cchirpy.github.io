@@ -74,6 +74,7 @@ footer {
 header .flex-container:last-child,
 footer .flex-container:last-child {
 	flex-shrink: 1;
+	text-align: right;
 }
 
 header {
@@ -95,15 +96,16 @@ header nav a {
 	padding: 0 0 0.3rem;
 }
 
-header nav li:not(:last-child),
-footer nav li:not(:last-child) {
-	margin: 0 var(--margin) 0 0;
+header nav li:not(:first-child),
+footer nav li:not(:first-child) {
+	margin: 0 0 0 var(--margin);
 }
 
 /* ================== LINKS ================== */
 
 a {
 	color: inherit;
+	overflow-wrap: break-word;
 }
 
 a:hover:not(header .flex-container:first-child),
@@ -171,10 +173,6 @@ code {
 	align-items: center;
 }
 
-.side-by-side *:last-child {
-	text-align: right;
-}
-
 /* ================= HOMEPAGE ================= */
 
 .profile {
@@ -199,7 +197,7 @@ code {
 
 .profile .flex-container:last-child img {
 	width: 1.7rem;
-	margin: 0 calc(var(--margin)/2);
+	margin: 0 calc(var(--margin)/2) calc(var(--margin)/2);
 }
 
 .profile .flex-container:last-child {
@@ -259,6 +257,10 @@ code {
 	margin: 0;
 }
 
+.properties .side-by-side:first-child p {
+	text-align: right;
+}
+
 /* =============== CONTACT FORM =============== */
 
 form *:not(:last-child) {
@@ -288,6 +290,8 @@ textarea {
 
 input[type=submit] {
 	align-self: flex-end;
+	font-weight: 500;
+	padding: 0.6rem 0.7rem 0.5rem;
 	cursor: pointer;
 	color: #2e2e37;
 }
