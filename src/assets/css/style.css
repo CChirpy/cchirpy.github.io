@@ -126,6 +126,10 @@ img {
 	width: 35rem;
 }
 
+li img {
+	max-width: 50%;
+}
+
 img:not(li img) {
 	display: block;
 	margin-left: auto;
@@ -220,7 +224,7 @@ code {
 }
 
 .gallery img {
-	height: 18rem;
+	height: 100%;
 	width: auto;
 	object-fit: cover;
 	aspect-ratio: 4 / 3;
@@ -247,6 +251,10 @@ code {
 
 .gallery>.flex-container div *:last-child {
 	margin: 0;
+}
+
+.post img {
+	width: 100%;
 }
 
 .properties * {
@@ -310,4 +318,12 @@ input[type=submit]:hover,
 	filter: drop-shadow(1px 1px 0px var(--black));
 	padding: 0.6rem 1.5rem;
 	border-radius: var(--corner);
+}
+
+/* =============== MEDIA QUERIES =============== */
+
+@media only screen and (min-width: 800px) {
+	.post {
+		padding: 10% 15%;
+	}
 }
