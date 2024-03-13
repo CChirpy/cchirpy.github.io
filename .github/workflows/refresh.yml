@@ -5,13 +5,14 @@ on:
   schedule:
     - cron: '1 18 * * *'  # Run at 6:01pm everyday
   workflow_dispatch:
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger GitHub pages rebuild
         run: |
-          curl --fail --request POST \
+          curl -v --fail --request POST \
             --url https://api.github.com/repos/${{ github.repository }}/pages/builds \
             --header "Authorization: Bearer $USER_TOKEN"
         env:
